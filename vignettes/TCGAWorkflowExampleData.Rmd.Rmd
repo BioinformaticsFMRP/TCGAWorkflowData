@@ -3,7 +3,7 @@ title: 'Example data for TCGA Workflow: Analyze cancer genomics and epigenomics 
 author: Tiago C. Silva, Antonio Colaprico, Catharina Olsen, Fulvio D’Angelo, Gianluca
   Bontempi Michele Ceccarelli , and Houtan Noushmehr
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output:  BiocStyle::html_document
 vignette: >
   %\VignetteIndexEntry{'Example data for TCGA Workflow: Analyze cancer genomics and epigenomics data using Bioconductor packages'}
   %\VignetteEngine{knitr::rmarkdown}
@@ -12,9 +12,10 @@ vignette: >
 
 # Data Introduction
 
-This package provides a dataset for those wishing to try out the workflow
-in Bioconductor: TCGAWorkflow. The data in this package are a subset of the TCGA data
-for LGG (Lower grade glioma ) and GBM (Glioblastoma mMltiforme) samples.
+This package provides a dataset for those wishing to try out the
+[TCGA Workflow: Analyze cancer genomics and epigenomics data using Bioconductor packages](https://f1000research.com/articles/5-1542/v2) [@10.12688/f1000research.8923.2]. 
+The data in this package are a subset of the TCGA data
+for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme) samples.
 
 # Loading the data
 
@@ -37,7 +38,7 @@ The following code will download
 segmented CNV from SNP array (Affymetrix Genome-Wide Human SNP Array
 6.0) for 20 GBM samples.
 
-```{r, fig.show='hold'}
+```{r , eval=FALSE, include=TRUE, results='asis'}
 library(TCGAbiolinks)
 query.gbm.nocnv <- GDCquery(project = "TCGA-GBM",
                             data.category = "Copy number variation",
@@ -57,7 +58,7 @@ gbm.nocnv <- GDCprepare(query.gbm.nocnv, save = TRUE, save.filename = "GBMnocnvh
 The following code will download 20 LGG and 20 GBM samples that have both 
 gene expression data. The Gene expression data is the raw expression signal for expression of a gene.
 
-```{r, fig.show='hold'}
+```{r , eval=FALSE, include=TRUE, results='asis'}
 query <- GDCquery(project = "TCGA-GBM",
                   data.category = "Gene expression",
                   data.type = "Gene expression quantification",
@@ -95,7 +96,7 @@ of the workflow faster. For a real analysis, all chromossomes should be used.
 The Gene expression data is the normalized results for expression of a gene.
 
 
-```{r, fig.show='hold'}
+```{r , eval=FALSE, include=TRUE, results='asis'}
 #----------- 8.3 Identification of Regulatory Enhancers   -------
 library(TCGAbiolinks)
 # Samples: primary solid tumor w/ DNA methylation and gene expression

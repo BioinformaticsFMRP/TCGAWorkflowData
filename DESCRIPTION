@@ -8,12 +8,14 @@ Description: An small dataset that can be used to run examples from the TCGAWork
 Depends:
     R (>= 3.4.0)
 Imports: SummarizedExperiment
-License: Artistic-2.0
+License: GPL-3
 VignetteBuilder: knitr
 biocViews: ExperimentData, Homo_sapiens_Data, MicroarrayData
 NeedsCompilation: no
 URL: https://f1000research.com/articles/5-1542/v2
 BugReports: https://github.com/BioinformaticsFMRP/TCGAWorkflow/issues
 RoxygenNote: 5.0.1
-Suggests: knitr,
-    rmarkdown
+Suggests: 
+    knitr,
+    rmarkdown,
+    pander
