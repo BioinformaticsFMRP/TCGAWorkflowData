@@ -21,7 +21,11 @@ for LGG (Lower grade glioma ) and GBM (Glioblastoma mMltiforme) samples.
 ```{r, fig.show='hold'}
 library(TCGAWorkflowExampleData)
 data(TCGAWorkflowExampleData)
-TCGAWorkflowExampleData
+data("elmer.example")
+data("GBMnocnvhg19")
+data("GBMIllumina_HiSeq")
+data("LGGIllumina_HiSeq")
+data("met.20.samples.GBM.LGG.chr9")
 ```
 
 # Data creation
