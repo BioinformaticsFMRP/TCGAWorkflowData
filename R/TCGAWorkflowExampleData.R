@@ -60,3 +60,10 @@ NULL
 #' @name cnvMatrix
 #' @format A matrix with 3252 rows and 6 columns
 NULL
+
+#' Merged LGG and GBM GDC maf files for  Somatic Mutation Calling Workflow mutect2
+#' @docType data
+#' @keywords internal
+#' @name mut
+#' @format A matrix with 101942 rows and 114 columns
+NULL

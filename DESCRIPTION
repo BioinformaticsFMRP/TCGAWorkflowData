@@ -1,6 +1,6 @@
 Package: TCGAWorkflowExampleData
 Title: Example data for TCGA Workflow 
-Version: 0.99.1
+Version: 0.99.2
 Date: 2017-01-31
 Author: Tiago Chedraoui Silva  <tiagochst@usp.br>
 Maintainer: Tiago Chedraoui Silva <tiagochst@usp.br>

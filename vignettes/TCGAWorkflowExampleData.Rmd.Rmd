@@ -160,7 +160,19 @@ exp.elmer <- TCGAprepare_elmer(exp.lgg, platform = "IlluminaHiSeq_RNASeqV2")
 save(exp.elmer, met.elmer, gbm.samples, lgg.samples, file = "elmer.example.rda", compress = "xz")
 ```
 
+## Mutation data
 
+The following code will downlaod Mutation annotation files from LGG and GBM samples
+and merge them into one single single file. The GDC Somatic Mutation Calling Workflow 
+used is the mutect2. For more information please check [GDC](https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/).
+
+```{r , eval=FALSE, include=TRUE, results='asis'}
+library(TCGAbiolinks)
+LGGmut <- GDCquery_Maf(tumor = "LGG", pipelines = "mutect2")
+GBMmut <- GDCquery_Maf(tumor = "GBM", pipelines = "mutect2")
+mut <- plyr::rbind.fill(LGGmut, GBMmut)
+save(mut,file ="maf_mutect2_LGG_GBM.rda")
+```
 
 # Session info
 ```{r sessionInfo, results='asis', echo=FALSE}
