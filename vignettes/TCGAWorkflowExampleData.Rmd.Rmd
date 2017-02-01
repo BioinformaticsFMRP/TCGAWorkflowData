@@ -20,12 +20,14 @@ for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme) samples.
 # Loading the data
 
 ```{r, fig.show='hold'}
-library(TCGAWorkflowExampleData)
+library(TCGAWorkflowData)
 data("elmer.example")
 data("GBMnocnvhg19")
 data("GBMIllumina_HiSeq")
 data("LGGIllumina_HiSeq")
 data("met.20.samples.GBM.LGG.chr9")
+data("maf_mutect2_LGG_GBM")
+data("markersMatrix")
 ```
 
 # Data creation
@@ -36,7 +38,7 @@ The following commands were used to create the data included with this package.
 
 The following code will download 
 segmented CNV from SNP array (Affymetrix Genome-Wide Human SNP Array
-6.0) for 20 GBM samples.
+6.0) for 20  Glioblastoma multiforme (GBM)  samples.
 
 ```{r , eval=FALSE, include=TRUE, results='asis'}
 library(TCGAbiolinks)
@@ -55,8 +57,8 @@ gbm.nocnv <- GDCprepare(query.gbm.nocnv, save = TRUE, save.filename = "GBMnocnvh
 
 ## Gene expression data
 
-The following code will download 20 LGG and 20 GBM samples that have both 
-gene expression data. The Gene expression data is the raw expression signal for expression of a gene.
+The following code will download 20  LGG (Lower grade glioma) and 20 GBM (Glioblastoma multiforme) 
+samples that have gene expression data. The Gene expression data is the raw expression signal for expression of a gene.
 
 ```{r , eval=FALSE, include=TRUE, results='asis'}
 query <- GDCquery(project = "TCGA-GBM",
@@ -87,11 +89,11 @@ lgg.exp <- GDCprepare(query, save = TRUE, summarizedExperiment = TRUE, save.file
 
 ## DNA methylation and Gene expression data
 
-The following code will select 10 LGG and 10 GBM samples that have both 
+The following code will select 10  LGG (Lower grade glioma) and 10 GBM (Glioblastoma multiforme)  samples that have both 
 DNA methylation  and gene expression data. This objects will be then prepared 
 to the format accept by the Biocondcutor package 
 `r Biocpkg("ELMER")`([link])(http://bioconductor.org/packages/release/bioc/html/ELMER.html).
-The DNA methylation will have only the chromossome 9 probes in order to make the example 
+The DNA methylation will have only probes in chromossome 9  in order to make the example 
 of the workflow faster. For a real analysis, all chromossomes should be used.
 The Gene expression data is the normalized results for expression of a gene.
 
@@ -172,6 +174,22 @@ LGGmut <- GDCquery_Maf(tumor = "LGG", pipelines = "mutect2")
 GBMmut <- GDCquery_Maf(tumor = "GBM", pipelines = "mutect2")
 mut <- plyr::rbind.fill(LGGmut, GBMmut)
 save(mut,file ="maf_mutect2_LGG_GBM.rda")
+```
+
+## Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
+
+```{r , eval=FALSE, include=TRUE, results='asis'}
+gdac.root <- "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/hg19_support/"
+file <- paste0(gdac.root, "genome.info.6.0_hg19.na31_minus_frequent_nan_probes_sorted_2.1.txt")
+# Retrieve probes meta file from broadinstitute website
+if(!file.exists(basename(file))) downloader::download(file, basename(file))
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-==--=--==---=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-==--=--==--
+# For hg38 analysis please take a look on:
+# https://gdc.cancer.gov/about-data/data-harmonization-and-generation/gdc-reference-files
+# File: SNP6 GRCh38 Liftover Probeset File for Copy Number Variation Analysis
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-==--=--==---=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-==--=--==--
+markersMatrix <-  readr::read_tsv(basename(file), col_names = FALSE, col_types = "ccn", progress = FALSE)
+save(markersMatrix, file = "markersMatrix.rda", compress = "xz")
 ```
 
 # Session info
