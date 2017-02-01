@@ -4,6 +4,7 @@
 #' @docType data
 #' @keywords internal
 #' @name met
+#' @import SummarizedExperiment
 #' @format A SumarrizedExperiment with 9861 rows and 20 samples
 NULL
 
