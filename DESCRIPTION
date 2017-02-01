@@ -1,11 +1,10 @@
 Package: TCGAWorkflowData
 Title: Data for TCGA Workflow 
-Version: 0.99.3
+Version: 0.99.4
 Author: Tiago Chedraoui Silva  <tiagochst@usp.br>
 Maintainer: Tiago Chedraoui Silva <tiagochst@usp.br>
 Description: 
-  This experimental data package has the data necessary to follow the 
-  TCGA Workflow: Analyze cancer genomics and epigenomics data using Bioconductor packages.
+  This experimental data package has the data necessary to follow the TCGA Workflow: Analyze cancer genomics and epigenomics data using Bioconductor packages.
   It contains the following files:
     - GBMnocnvhg19: segmented CNV from SNP array (Affymetrix Genome-Wide Human SNP Array
       6.0) for 20  Glioblastoma multiforme (GBM)  samples.
@@ -24,7 +23,7 @@ Description:
      samples merged into a single matrix. The GDC Somatic Mutation Calling Workflow mutect2 was used to create this MAF files. 
    - markersMatrix: Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
   For more information how to create these objects please read the vignette of this package 
-  (You can open it with browseVignettes("TCGAWorkflowData")))
+  (You can open it with the command browseVignettes("TCGAWorkflowData")).
 Depends:
     R (>= 3.4.0)
 Imports: SummarizedExperiment

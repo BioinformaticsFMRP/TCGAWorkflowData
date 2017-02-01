@@ -8,5 +8,8 @@
 \description{
 CNV data for 20 TCGA-GBM samples
 }
+\examples{
+data("GBMnocnvhg19")
+}
 \keyword{internal}
 

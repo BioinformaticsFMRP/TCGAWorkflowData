@@ -9,5 +9,8 @@ with 21022 rows and 20 columns}
 \description{
 A gene expression matrix wih 20 LGG samples
 }
+\examples{
+data("LGGIllumina_HiSeq")
+}
 \keyword{internal}
 

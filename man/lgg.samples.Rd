@@ -8,5 +8,8 @@
 \description{
 Identifiers for the 10 LGG samples in the ELMER objects
 }
+\examples{
+data("elmer.example")
+}
 \keyword{internal}
 

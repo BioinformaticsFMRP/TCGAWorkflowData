@@ -6,6 +6,8 @@
 #' @name met
 #' @import SummarizedExperiment
 #' @format A SumarrizedExperiment with 9861 rows and 20 samples
+#' @examples
+#' data("met.20.samples.GBM.LGG.chr9")
 NULL
 
 #' A DNA methylation matrix for 10 GBM and 10 LGG samples prepared for
@@ -14,6 +16,8 @@ NULL
 #' @keywords internal
 #' @name met.elmer
 #' @format A matrix with 8066 rows and 20 samples
+#' @examples
+#' data("elmer.example")
 NULL
 
 #' A gene expression matrix for 10 GBM and 10 LGG samples prepared for
@@ -22,6 +26,8 @@ NULL
 #' @keywords internal
 #' @name exp.elmer
 #' @format A matrix with 21022 rows and 20 samples
+#' @examples
+#' data("elmer.example")
 NULL
 
 #' Identifiers for the 10 LGG samples in the ELMER objects
@@ -29,6 +35,8 @@ NULL
 #' @keywords internal
 #' @name lgg.samples
 #' @format A vector of 10 barcodes
+#' @examples
+#' data("elmer.example")
 NULL
 
 #' Identifiers for the 10 GBM samples in the ELMER objects
@@ -36,6 +44,8 @@ NULL
 #' @keywords internal
 #' @name gbm.samples
 #' @format A vector of 10 barcodes
+#' @examples
+#' data("elmer.example")
 NULL
 
 #' A gene expression matrix wih 20 LGG samples
@@ -44,6 +54,8 @@ NULL
 #' @name lgg.exp
 #' @format Gene expression: A SummariedExperiment object
 #' with 21022 rows and 20 columns
+#' @examples
+#' data("LGGIllumina_HiSeq")
 NULL
 
 #' A gene expression matrix wih 20 GBM samples
@@ -52,6 +64,8 @@ NULL
 #' @name gbm.exp
 #' @format Gene expression: A SummariedExperiment object
 #'  with 21022 rows and 20 columns
+#' @examples
+#' data("GBMIllumina_HiSeq")
 NULL
 
 #' CNV data for 20 TCGA-GBM samples
@@ -59,6 +73,8 @@ NULL
 #' @keywords internal
 #' @name cnvMatrix
 #' @format A matrix with 3252 rows and 6 columns
+#' @examples
+#' data("GBMnocnvhg19")
 NULL
 
 #' Merged LGG and GBM GDC maf files for  Somatic Mutation Calling Workflow mutect2
@@ -66,6 +82,8 @@ NULL
 #' @keywords internal
 #' @name mut
 #' @format A matrix with 101942 rows and 114 columns
+#' @examples
+#' data("maf_mutect2_LGG_GBM")
 NULL
 
 #' Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
@@ -74,6 +92,9 @@ NULL
 #' @keywords internal
 #' @name markersMatrix
 #' @format A matrix with 1831228 rows and 3 columns
+#' @examples
+#' data("markersMatrix")
+
 NULL
 
 

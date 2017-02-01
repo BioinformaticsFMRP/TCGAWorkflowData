@@ -10,5 +10,8 @@ From: ftp://ftp.broadinstitute.org/pub/GISTIC2.0/hg19_support/genome.info.6.0_hg
 Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
 From: ftp://ftp.broadinstitute.org/pub/GISTIC2.0/hg19_support/genome.info.6.0_hg19.na31_minus_frequent_nan_probes_sorted_2.1.txt
 }
+\examples{
+data("markersMatrix")
+}
 \keyword{internal}
 

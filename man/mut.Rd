@@ -8,5 +8,8 @@
 \description{
 Merged LGG and GBM GDC maf files for  Somatic Mutation Calling Workflow mutect2
 }
+\examples{
+data("maf_mutect2_LGG_GBM")
+}
 \keyword{internal}
 

@@ -9,5 +9,8 @@
 \description{
 A gene expression matrix wih 20 GBM samples
 }
+\examples{
+data("GBMIllumina_HiSeq")
+}
 \keyword{internal}
 
