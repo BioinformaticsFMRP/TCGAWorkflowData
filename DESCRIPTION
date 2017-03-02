@@ -25,7 +25,7 @@ Description:
   For more information how to create these objects please read the vignette of this package 
   (You can open it with the command browseVignettes("TCGAWorkflowData")).
 Depends:
-    R (>= 3.4.0)
+    R (>= 3.3.0)
 Imports: SummarizedExperiment
 License: GPL-3
 VignetteBuilder: knitr
