@@ -14,4 +14,3 @@ From: ftp://ftp.broadinstitute.org/pub/GISTIC2.0/hg19_support/genome.info.6.0_hg
 data("markersMatrix")
 }
 \keyword{internal}
-

@@ -12,4 +12,3 @@ Identifiers for the 10 GBM samples in the ELMER objects
 data("elmer.example")
 }
 \keyword{internal}
-

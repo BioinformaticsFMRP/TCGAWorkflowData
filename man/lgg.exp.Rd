@@ -13,4 +13,3 @@ A gene expression matrix wih 20 LGG samples
 data("LGGIllumina_HiSeq")
 }
 \keyword{internal}
-

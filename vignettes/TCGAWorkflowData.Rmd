@@ -34,6 +34,24 @@ data("markersMatrix")
 
 The following commands were used to create the data included with this package.
 
+## GISTIC results
+
+Download and save a subset of GBM GISTIC results from GDAC firehose.
+
+```{R, eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+library(RTCGAToolbox)
+# Download GISTIC results
+lastAnalyseDate <- getFirehoseAnalyzeDates(1)
+gistic <- getFirehoseData("GBM",gistic2_Date = lastAnalyseDate)
+
+# get GISTIC results
+gistic.allbygene <- getData(gistic,type = "GISTIC", CN = "All")
+gistic.allbygene <- gistic.allbygene[1:10,]
+gistic.thresholedbygene <- getData(gistic,type = "GISTIC", CN = "Thresholed")
+gistic.thresholedbygene <- gistic.thresholedbygene[1:10,]
+save(gistic.allbygene,gistic.thresholedbygene,file = "GBM_gistic.rda", compress = "xz")
+```
+
 ## Copy number variations (CNVs) 
 
 The following code will download 
@@ -190,6 +208,23 @@ if(!file.exists(basename(file))) downloader::download(file, basename(file))
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-==--=--==---=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-==--=--==--
 markersMatrix <-  readr::read_tsv(basename(file), col_names = FALSE, col_types = "ccn", progress = FALSE)
 save(markersMatrix, file = "markersMatrix.rda", compress = "xz")
+```
+
+## Biogrid data
+
+Download biogrid information.
+
+```{r , eval=FALSE, include=TRUE, results='asis'}
+### read biogrid info
+### Check last version in https://thebiogrid.org/download.php 
+file <- "http://thebiogrid.org/downloads/archives/Release%20Archive/BIOGRID-3.4.146/BIOGRID-ALL-3.4.146.tab2.zip"
+if(!file.exists(gsub("zip","txt",basename(file)))){
+  downloader::download(file,basename(file))
+  unzip(basename(file),junkpaths =TRUE)
+}
+
+tmp.biogrid <- read.csv(gsub("zip","txt",basename(file)), header=TRUE, sep="\t", stringsAsFactors=FALSE)
+save(tmp.biogrid, file = "biogrid.rda", compress = "xz")
 ```
 
 # Session info

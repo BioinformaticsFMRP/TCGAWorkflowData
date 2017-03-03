@@ -94,9 +94,36 @@ NULL
 #' @format A matrix with 1831228 rows and 3 columns
 #' @examples
 #' data("markersMatrix")
-
 NULL
 
+#' A subset of GBM GISTIC2 results, which is used to identify genes targeted by somatic copy-number alterations (SCNAs)
+#' From: GDAC firehose, downloaded with RTCGAtoolbox
+#' @docType data
+#' @keywords internal
+#' @name gistic.allbygene
+#' @format A matrix with 24776 rows and 580 columns
+#' @examples
+#' data("GBM_gistic")
+NULL
+
+#' A subset of GBM GISTIC2 results, which is used to identify genes targeted by somatic copy-number alterations (SCNAs)
+#' From: GDAC firehose, downloaded with RTCGAtoolbox
+#' @docType data
+#' @keywords internal
+#' @name gistic.thresholedbygene
+#' @format A matrix with 24776 rows and 580 columns
+#' @examples
+#' data("GBM_gistic")
+NULL
+
+#' Biogrid information
+#' @docType data
+#' @keywords internal
+#' @name tmp.biogrid
+#' @format Two matrices with 24776 rows and 580 columns
+#' @examples
+#' data("GBM_gistic")
+NULL
 
 #' @title Data for TCGA Workflow
 #' @description
@@ -117,6 +144,9 @@ NULL
 #'     10  LGG (Lower grade glioma) and 10 GBM (Glioblastoma multiforme) in the required format
 #'     for to execute the R/Bioconductor ELMER package analysis and a vector
 #'     identifying which sample belongs to each tumor type.
+#'     \item GBM_gistic: a subset of GBM GISTIC results which is used to identify genes targeted by
+#'      somatic copy-number  alterations (SCNAs)
+#'      \item biogrid: biogrid information
 #'   \item maf_mutect2_LGG_GBM: Mutation annotation files for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme)
 #'     samples merged into a single matrix. The GDC Somatic Mutation Calling Workflow mutect2 was used to create this MAF files.
 #'   \item markersMatrix: Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
@@ -135,4 +165,6 @@ NULL
 #' data("met.20.samples.GBM.LGG.chr9")
 #' data("maf_mutect2_LGG_GBM")
 #' data("markersMatrix")
+#' data("biogrid")
+#' data("GBM_gistic")
 NULL

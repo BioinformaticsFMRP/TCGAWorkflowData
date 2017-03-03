@@ -14,4 +14,3 @@ the creation of an ELMER object.
 data("elmer.example")
 }
 \keyword{internal}
-

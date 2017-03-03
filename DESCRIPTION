@@ -12,6 +12,9 @@ Description:
      20 GBM (Glioblastoma multiforme) samples
    - LGGIllumina_HiSeq: a matrix with  raw expression signal for expression of a gene for
      20 LGG (Lower grade glioma) samples
+   - GBM_gistic: a subset of GBM GISTIC results which is used to identify genes targeted by somatic copy-number 
+   alterations (SCNAs)
+   - biogrid: biogrid information
    - met.20.samples.GBM.LGG.chr9:  DNA methylation matrix from Infinium HumanMethylation450 platform 
      for 10 LGG (Lower grade glioma) and 10 GBM (Glioblastoma multiforme). 
      It has only probes in chromossome 9  in order to make the example  of the workflow faster
@@ -33,7 +36,7 @@ biocViews: ExperimentData, Homo_sapiens_Data, MicroarrayData
 NeedsCompilation: no
 URL: https://f1000research.com/articles/5-1542/v2
 BugReports: https://github.com/BioinformaticsFMRP/TCGAWorkflow/issues
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 Suggests: 
     knitr,
     rmarkdown,

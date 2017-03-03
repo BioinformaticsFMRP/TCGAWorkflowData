@@ -16,4 +16,3 @@ for 10 LGG samples and 10 GBM samples
 data("met.20.samples.GBM.LGG.chr9")
 }
 \keyword{internal}
-

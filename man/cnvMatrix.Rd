@@ -12,4 +12,3 @@ CNV data for 20 TCGA-GBM samples
 data("GBMnocnvhg19")
 }
 \keyword{internal}
-
