@@ -11,6 +11,6 @@ A subset of GBM GISTIC2 results, which is used to identify genes targeted by som
 From: GDAC firehose, downloaded with RTCGAtoolbox
 }
 \examples{
-data("GBM_gistic")
+data("GBMGistic")
 }
 \keyword{internal}

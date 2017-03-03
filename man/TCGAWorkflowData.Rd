@@ -16,20 +16,20 @@ It contains the following files:
     20 GBM (Glioblastoma multiforme) samples
   \item LGGIllumina_HiSeq: a matrix with  raw expression signal for expression of a gene for
     20 LGG (Lower grade glioma) samples
-  \item met.20.samples.GBM.LGG.chr9:  DNA methylation matrix from Infinium HumanMethylation450 platform
+  \item met20SamplesGBMLGGchr9:  DNA methylation matrix from Infinium HumanMethylation450 platform
     for 10 LGG (Lower grade glioma) and 10 GBM (Glioblastoma multiforme).
     It has only probes in chromossome 9  in order to make the example  of the workflow faster
-  \item elmer.example: Contains a DNA methylation matrix (only probes in chromossome 9) and a gene expression matrix for
+  \item elmerExample: Contains a DNA methylation matrix (only probes in chromossome 9) and a gene expression matrix for
     10  LGG (Lower grade glioma) and 10 GBM (Glioblastoma multiforme) in the required format
     for to execute the R/Bioconductor ELMER package analysis and a vector
     identifying which sample belongs to each tumor type.
-    \item GBM_gistic: a subset of GBM GISTIC results which is used to identify genes targeted by
+    \item GBMGistic: a subset of GBM GISTIC results which is used to identify genes targeted by
      somatic copy-number  alterations (SCNAs)
      \item biogrid: biogrid information
-  \item maf_mutect2_LGG_GBM: Mutation annotation files for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme)
+  \item mafMutect2LGGGBM: Mutation annotation files for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme)
     samples merged into a single matrix. The GDC Somatic Mutation Calling Workflow mutect2 was used to create this MAF files.
   \item markersMatrix: Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
-  \item  histone.marks histone marks specific for brain tissue using from Roadmap database.
+  \item  histoneMarks histone marks specific for brain tissue using from Roadmap database.
 }
     For more information how to create these objects please read the vignette of this package with the
     follwing command: \code{browseVignettes("TCGAWorkflowData")}

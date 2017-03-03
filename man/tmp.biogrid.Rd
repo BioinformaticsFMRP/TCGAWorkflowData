@@ -9,6 +9,6 @@
 Biogrid information
 }
 \examples{
-data("GBM_gistic")
+data("biogrid")
 }
 \keyword{internal}

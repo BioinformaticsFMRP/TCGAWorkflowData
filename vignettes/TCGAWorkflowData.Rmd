@@ -21,13 +21,15 @@ for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme) samples.
 
 ```{r, fig.show='hold'}
 library(TCGAWorkflowData)
-data("elmer.example")
+data("elmerExample")
 data("GBMnocnvhg19")
 data("GBMIllumina_HiSeq")
 data("LGGIllumina_HiSeq")
-data("met.20.samples.GBM.LGG.chr9")
-data("maf_mutect2_LGG_GBM")
+data("met20SamplesGBMLGGchr9")
+data("mafMutect2LGGGBM")
 data("markersMatrix")
+data("histoneMarks")
+data("biogrid")
 ```
 
 # Data creation
@@ -49,7 +51,7 @@ gistic.allbygene <- getData(gistic,type = "GISTIC", CN = "All")
 gistic.allbygene <- gistic.allbygene[1:10,]
 gistic.thresholedbygene <- getData(gistic,type = "GISTIC", CN = "Thresholed")
 gistic.thresholedbygene <- gistic.thresholedbygene[1:10,]
-save(gistic.allbygene,gistic.thresholedbygene,file = "GBM_gistic.rda", compress = "xz")
+save(gistic.allbygene,gistic.thresholedbygene,file = "GBMGistic.rda", compress = "xz")
 ```
 
 ## Copy number variations (CNVs) 
@@ -177,7 +179,7 @@ query.exp <- GDCquery(project = c("TCGA-LGG","TCGA-GBM"),
 GDCdownload(query.exp)
 exp.lgg <- GDCprepare(query.exp, save = FALSE)
 exp.elmer <- TCGAprepare_elmer(exp.lgg, platform = "IlluminaHiSeq_RNASeqV2")
-save(exp.elmer, met.elmer, gbm.samples, lgg.samples, file = "elmer.example.rda", compress = "xz")
+save(exp.elmer, met.elmer, gbm.samples, lgg.samples, file = "elmerExample.rda", compress = "xz")
 ```
 
 ## Mutation data
@@ -191,7 +193,7 @@ library(TCGAbiolinks)
 LGGmut <- GDCquery_Maf(tumor = "LGG", pipelines = "mutect2")
 GBMmut <- GDCquery_Maf(tumor = "GBM", pipelines = "mutect2")
 mut <- plyr::rbind.fill(LGGmut, GBMmut)
-save(mut,LGGmut,GBMmut,file ="maf_mutect2_LGG_GBM.rda")
+save(mut,LGGmut,GBMmut,file ="mafMutect2LGGGBM.rda")
 ```
 
 ## Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
@@ -249,7 +251,7 @@ bpChipEpi_brain <- query(ah , c("EpigenomeRoadMap", "narrowPeak", "chip", "conso
 # Get chip-seq data
 histone.marks <- pblapply(names(bpChipEpi_brain), function(x) {ah[[x]]})
 names(histone.marks) <- names(bpChipEpi_brain)
-save(histone.marks, file = "histonemarks.rda", compress = "xz")
+save(histone.marks, file = "histoneMarks.rda", compress = "xz")
 ```
 
 # Session info

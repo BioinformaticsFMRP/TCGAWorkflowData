@@ -7,7 +7,7 @@
 #' @import SummarizedExperiment
 #' @format A SumarrizedExperiment with 9861 rows and 20 samples
 #' @examples
-#' data("met.20.samples.GBM.LGG.chr9")
+#' data("met20samplesGBMLGGchr9")
 NULL
 
 #' A DNA methylation matrix for 10 GBM and 10 LGG samples prepared for
@@ -17,7 +17,7 @@ NULL
 #' @name met.elmer
 #' @format A matrix with 8066 rows and 20 samples
 #' @examples
-#' data("elmer.example")
+#' data("elmerExample")
 NULL
 
 #' A gene expression matrix for 10 GBM and 10 LGG samples prepared for
@@ -27,7 +27,7 @@ NULL
 #' @name exp.elmer
 #' @format A matrix with 21022 rows and 20 samples
 #' @examples
-#' data("elmer.example")
+#' data("elmerExample")
 NULL
 
 #' Identifiers for the 10 LGG samples in the ELMER objects
@@ -36,7 +36,7 @@ NULL
 #' @name lgg.samples
 #' @format A vector of 10 barcodes
 #' @examples
-#' data("elmer.example")
+#' data("elmerExample")
 NULL
 
 #' Identifiers for the 10 GBM samples in the ELMER objects
@@ -45,7 +45,7 @@ NULL
 #' @name gbm.samples
 #' @format A vector of 10 barcodes
 #' @examples
-#' data("elmer.example")
+#' data("elmerExample")
 NULL
 
 #' A gene expression matrix wih 20 LGG samples
@@ -83,7 +83,7 @@ NULL
 #' @name mut
 #' @format A matrix with 101942 rows and 114 columns
 #' @examples
-#' data("maf_mutect2_LGG_GBM")
+#' data("mafMutect2LGGGBM")
 NULL
 
 #'  LGG  GDC maf files for  Somatic Mutation Calling Workflow mutect2
@@ -92,7 +92,7 @@ NULL
 #' @name LGGmut
 #' @format A matrix with 29840 rows and 114 columns
 #' @examples
-#' data("maf_mutect2_LGG_GBM")
+#' data("mafMutect2LGGGBM")
 NULL
 
 #'  GBM GDC maf files for  Somatic Mutation Calling Workflow mutect2
@@ -101,9 +101,17 @@ NULL
 #' @name GBMmut
 #' @format A matrix with 72102 rows and 114 columns
 #' @examples
-#' data("maf_mutect2_LGG_GBM")
+#' data("mafMutect2LGGGBM")
 NULL
 
+#'  histone marks specific for brain tissue from the Roadmap database.
+#' @docType data
+#' @keywords internal
+#' @name histone.marks
+#' @format A matrix with 72102 rows and 114 columns
+#' @examples
+#' data("histoneMarks")
+NULL
 
 #' Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
 #' From: ftp://ftp.broadinstitute.org/pub/GISTIC2.0/hg19_support/genome.info.6.0_hg19.na31_minus_frequent_nan_probes_sorted_2.1.txt
@@ -122,7 +130,7 @@ NULL
 #' @name gistic.allbygene
 #' @format A matrix with 24776 rows and 580 columns
 #' @examples
-#' data("GBM_gistic")
+#' data("GBMGistic")
 NULL
 
 #' A subset of GBM GISTIC2 results, which is used to identify genes targeted by somatic copy-number alterations (SCNAs)
@@ -132,7 +140,7 @@ NULL
 #' @name gistic.thresholedbygene
 #' @format A matrix with 24776 rows and 580 columns
 #' @examples
-#' data("GBM_gistic")
+#' data("GBMGistic")
 NULL
 
 #' Biogrid information
@@ -141,7 +149,7 @@ NULL
 #' @name tmp.biogrid
 #' @format Two matrices with 24776 rows and 580 columns
 #' @examples
-#' data("GBM_gistic")
+#' data("biogrid")
 NULL
 
 #' @title Data for TCGA Workflow
@@ -156,20 +164,20 @@ NULL
 #'     20 GBM (Glioblastoma multiforme) samples
 #'   \item LGGIllumina_HiSeq: a matrix with  raw expression signal for expression of a gene for
 #'     20 LGG (Lower grade glioma) samples
-#'   \item met.20.samples.GBM.LGG.chr9:  DNA methylation matrix from Infinium HumanMethylation450 platform
+#'   \item met20SamplesGBMLGGchr9:  DNA methylation matrix from Infinium HumanMethylation450 platform
 #'     for 10 LGG (Lower grade glioma) and 10 GBM (Glioblastoma multiforme).
 #'     It has only probes in chromossome 9  in order to make the example  of the workflow faster
-#'   \item elmer.example: Contains a DNA methylation matrix (only probes in chromossome 9) and a gene expression matrix for
+#'   \item elmerExample: Contains a DNA methylation matrix (only probes in chromossome 9) and a gene expression matrix for
 #'     10  LGG (Lower grade glioma) and 10 GBM (Glioblastoma multiforme) in the required format
 #'     for to execute the R/Bioconductor ELMER package analysis and a vector
 #'     identifying which sample belongs to each tumor type.
-#'     \item GBM_gistic: a subset of GBM GISTIC results which is used to identify genes targeted by
+#'     \item GBMGistic: a subset of GBM GISTIC results which is used to identify genes targeted by
 #'      somatic copy-number  alterations (SCNAs)
 #'      \item biogrid: biogrid information
-#'   \item maf_mutect2_LGG_GBM: Mutation annotation files for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme)
+#'   \item mafMutect2LGGGBM: Mutation annotation files for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme)
 #'     samples merged into a single matrix. The GDC Somatic Mutation Calling Workflow mutect2 was used to create this MAF files.
 #'   \item markersMatrix: Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
-#'   \item  histone.marks histone marks specific for brain tissue using from Roadmap database.
+#'   \item  histoneMarks histone marks specific for brain tissue using from Roadmap database.
 #'}
 #'     For more information how to create these objects please read the vignette of this package with the
 #'     follwing command: \code{browseVignettes("TCGAWorkflowData")}
@@ -178,14 +186,14 @@ NULL
 #' @name TCGAWorkflowData
 #' @keywords utilities
 #' @examples
-#' data("elmer.example")
+#' data("elmerExample")
 #' data("GBMnocnvhg19")
 #' data("GBMIllumina_HiSeq")
 #' data("LGGIllumina_HiSeq")
-#' data("met.20.samples.GBM.LGG.chr9")
-#' data("maf_mutect2_LGG_GBM")
+#' data("met20SamplesGBMLGGchr9")
+#' data("mafMutect2LGGGBM")
 #' data("markersMatrix")
 #' data("biogrid")
-#' data("GBM_gistic")
-#' data("histonemarks)
+#' data("GBMGistic")
+#' data("histoneMarks)
 NULL

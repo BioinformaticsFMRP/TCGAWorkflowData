@@ -11,6 +11,6 @@ A DNA methylation matrix for 10 GBM and 10 LGG samples prepared for
 the creation of an ELMER object.
 }
 \examples{
-data("elmer.example")
+data("elmerExample")
 }
 \keyword{internal}

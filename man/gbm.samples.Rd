@@ -9,6 +9,6 @@
 Identifiers for the 10 GBM samples in the ELMER objects
 }
 \examples{
-data("elmer.example")
+data("elmerExample")
 }
 \keyword{internal}

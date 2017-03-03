@@ -9,6 +9,6 @@
 LGG  GDC maf files for  Somatic Mutation Calling Workflow mutect2
 }
 \examples{
-data("maf_mutect2_LGG_GBM")
+data("mafMutect2LGGGBM")
 }
 \keyword{internal}
