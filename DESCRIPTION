@@ -25,6 +25,7 @@ Description:
    - maf_mutect2_LGG_GBM: Mutation annotation files for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme)
      samples merged into a single matrix. The GDC Somatic Mutation Calling Workflow mutect2 was used to create this MAF files. 
    - markersMatrix: Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
+   - histone.marks: histone marks specific for brain tissue using from Roadmap database.
   For more information how to create these objects please read the vignette of this package 
   (You can open it with the command browseVignettes("TCGAWorkflowData")).
 Depends:

@@ -227,6 +227,31 @@ tmp.biogrid <- read.csv(gsub("zip","txt",basename(file)), header=TRUE, sep="\t",
 save(tmp.biogrid, file = "biogrid.rda", compress = "xz")
 ```
 
+## Histone marks
+
+The code below was used to download histone marks specific for brain tissue using
+the AnnotationHub package that can access the Roadmap database. 
+
+```{r results='hide', eval=FALSE, echo=FALSE, message=FALSE,warning=FALSE}
+library(ChIPseeker)
+library(AnnotationHub)
+library(pbapply)
+library(ggplot2)
+#------------------ Working with ChipSeq data ---------------
+# Step 1: download histone marks for a brain and non-brain samples.
+#------------------------------------------------------------
+# loading annotation hub database
+ah = AnnotationHub()
+
+# Searching for brain consolidated epigenomes in the roadmap database
+bpChipEpi_brain <- query(ah , c("EpigenomeRoadMap", "narrowPeak", "chip", "consolidated","brain","E068"))
+
+# Get chip-seq data
+histone.marks <- pblapply(names(bpChipEpi_brain), function(x) {ah[[x]]})
+names(histone.marks) <- names(bpChipEpi_brain)
+save(histone.marks, file = "histonemarks.rda", compress = "xz")
+```
+
 # Session info
 ```{r sessionInfo, results='asis', echo=FALSE}
 pander::pander(sessionInfo(), compact = FALSE)
