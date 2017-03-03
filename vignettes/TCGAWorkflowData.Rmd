@@ -191,7 +191,7 @@ library(TCGAbiolinks)
 LGGmut <- GDCquery_Maf(tumor = "LGG", pipelines = "mutect2")
 GBMmut <- GDCquery_Maf(tumor = "GBM", pipelines = "mutect2")
 mut <- plyr::rbind.fill(LGGmut, GBMmut)
-save(mut,file ="maf_mutect2_LGG_GBM.rda")
+save(mut,LGGmut,GBMmut,file ="maf_mutect2_LGG_GBM.rda")
 ```
 
 ## Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis

@@ -86,6 +86,25 @@ NULL
 #' data("maf_mutect2_LGG_GBM")
 NULL
 
+#'  LGG  GDC maf files for  Somatic Mutation Calling Workflow mutect2
+#' @docType data
+#' @keywords internal
+#' @name LGGmut
+#' @format A matrix with 29840 rows and 114 columns
+#' @examples
+#' data("maf_mutect2_LGG_GBM")
+NULL
+
+#'  GBM GDC maf files for  Somatic Mutation Calling Workflow mutect2
+#' @docType data
+#' @keywords internal
+#' @name GBMmut
+#' @format A matrix with 72102 rows and 114 columns
+#' @examples
+#' data("maf_mutect2_LGG_GBM")
+NULL
+
+
 #' Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
 #' From: ftp://ftp.broadinstitute.org/pub/GISTIC2.0/hg19_support/genome.info.6.0_hg19.na31_minus_frequent_nan_probes_sorted_2.1.txt
 #' @docType data
