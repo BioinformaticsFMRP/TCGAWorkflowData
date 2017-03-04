@@ -113,6 +113,14 @@ NULL
 #' data("histoneMarks")
 NULL
 
+#' Annotation hub search results for "EpigenomeRoadMap", "narrowPeak", "chip", "consolidated","brain","E068"
+#' @docType data
+#' @keywords internal
+#' @name bpChipEpi_brain
+#' @format A matrix with 72102 rows and 114 columns
+#' @examples
+#' data("histoneMarks")
+NULL
 #' Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
 #' From: ftp://ftp.broadinstitute.org/pub/GISTIC2.0/hg19_support/genome.info.6.0_hg19.na31_minus_frequent_nan_probes_sorted_2.1.txt
 #' @docType data
@@ -177,7 +185,7 @@ NULL
 #'   \item mafMutect2LGGGBM: Mutation annotation files for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme)
 #'     samples merged into a single matrix. The GDC Somatic Mutation Calling Workflow mutect2 was used to create this MAF files.
 #'   \item markersMatrix: Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
-#'   \item  histoneMarks histone marks specific for brain tissue using from Roadmap database.
+#'   \item  histoneMarks: histone marks specific for brain tissue using from Roadmap database.
 #'}
 #'     For more information how to create these objects please read the vignette of this package with the
 #'     follwing command: \code{browseVignettes("TCGAWorkflowData")}
