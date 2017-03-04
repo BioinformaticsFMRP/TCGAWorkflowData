@@ -34,4 +34,16 @@ It contains the following files:
     For more information how to create these objects please read the vignette of this package with the
     follwing command: \code{browseVignettes("TCGAWorkflowData")}
 }
+\examples{
+data("elmerExample")
+data("GBMnocnvhg19")
+data("GBMIllumina_HiSeq")
+data("LGGIllumina_HiSeq")
+data("met20SamplesGBMLGGchr9")
+data("mafMutect2LGGGBM")
+data("markersMatrix")
+data("biogrid")
+data("GBMGistic")
+data("histoneMarks")
+}
 \keyword{utilities}

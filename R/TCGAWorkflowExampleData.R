@@ -195,5 +195,5 @@ NULL
 #' data("markersMatrix")
 #' data("biogrid")
 #' data("GBMGistic")
-#' data("histoneMarks)
+#' data("histoneMarks")
 NULL
