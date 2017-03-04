@@ -251,7 +251,7 @@ bpChipEpi_brain <- query(ah , c("EpigenomeRoadMap", "narrowPeak", "chip", "conso
 # Get chip-seq data
 histone.marks <- pblapply(names(bpChipEpi_brain), function(x) {ah[[x]]})
 names(histone.marks) <- names(bpChipEpi_brain)
-save(histone.marks,bpChipEpi_brain, file = "histoneMarks.rda", compress = "xz")
+save(histone.marks, file = "histoneMarks.rda", compress = "xz")
 ```
 
 # Session info
