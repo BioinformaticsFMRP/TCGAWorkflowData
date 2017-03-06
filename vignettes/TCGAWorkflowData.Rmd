@@ -30,11 +30,36 @@ data("mafMutect2LGGGBM")
 data("markersMatrix")
 data("histoneMarks")
 data("biogrid")
+data("genes_GR")
 ```
 
 # Data creation
 
 The following commands were used to create the data included with this package.
+
+## Genes information
+
+Download gene information for hg19 using TCGAbiolinks, which uses biomart parckage.
+
+```{r , eval = FALSE, message=FALSE,warning=FALSE, include=TRUE}
+library(GenomicRanges)
+library(TCGAbiolinks)
+##############################
+## Recurrent CNV annotation ## 
+##############################
+# Get gene information from GENCODE using biomart
+genes <- TCGAbiolinks:::get.GRCh.bioMart(genome = "hg19") 
+genes <- genes[genes$external_gene_id != "" & genes$chromosome_name %in% c(1:22,"X","Y"),]
+genes[genes$chromosome_name == "X", "chromosome_name"] <- 23
+genes[genes$chromosome_name == "Y", "chromosome_name"] <- 24
+genes$chromosome_name <- sapply(genes$chromosome_name,as.integer)
+genes <- genes[order(genes$start_position),]
+genes <- genes[order(genes$chromosome_name),]
+genes <- genes[,c("external_gene_id", "chromosome_name", "start_position","end_position")]
+colnames(genes) <- c("GeneSymbol","Chr","Start","End")
+genes_GR <- makeGRangesFromDataFrame(genes,keep.extra.columns = TRUE)
+save(genes_GR,file = "genes_GR.rda", compress = "xz")
+```
 
 ## GISTIC results
 

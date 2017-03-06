@@ -20,6 +20,15 @@ NULL
 #' data("elmerExample")
 NULL
 
+#'  A GRanges object with gene information (hg19)
+#' @docType data
+#' @keywords internal
+#' @name genes_GR
+#' @format A GRanges object
+#' @examples
+#' data("genes_GR")
+NULL
+
 #' A gene expression matrix for 10 GBM and 10 LGG samples prepared for
 #' the creation of an ELMER object.
 #' @docType data
@@ -178,6 +187,8 @@ NULL
 #'     samples merged into a single matrix. The GDC Somatic Mutation Calling Workflow mutect2 was used to create this MAF files.
 #'   \item markersMatrix: Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
 #'   \item  histoneMarks: histone marks specific for brain tissue using from Roadmap database.
+#'   \item  genes_GR: A GRanges Object  with gene information (hg19) downloaded from ENSEMBLE database using
+#'   biomart via TCGAbiolinks
 #'}
 #'     For more information how to create these objects please read the vignette of this package with the
 #'     follwing command: \code{browseVignettes("TCGAWorkflowData")}
@@ -196,4 +207,5 @@ NULL
 #' data("biogrid")
 #' data("GBMGistic")
 #' data("histoneMarks")
+#' data("genes_GR")
 NULL
