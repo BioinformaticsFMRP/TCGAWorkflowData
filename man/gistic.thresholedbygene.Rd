@@ -3,11 +3,13 @@
 \docType{data}
 \name{gistic.thresholedbygene}
 \alias{gistic.thresholedbygene}
-\title{A subset of GBM GISTIC2 results, which is used to identify genes targeted by somatic copy-number alterations (SCNAs)
+\title{A subset of GBM GISTIC2 results, which is used to identify genes
+targeted by somatic copy-number alterations (SCNAs)
 From: GDAC firehose, downloaded with RTCGAtoolbox}
 \format{A matrix with 24776 rows and 580 columns}
 \description{
-A subset of GBM GISTIC2 results, which is used to identify genes targeted by somatic copy-number alterations (SCNAs)
+A subset of GBM GISTIC2 results, which is used to identify genes
+targeted by somatic copy-number alterations (SCNAs)
 From: GDAC firehose, downloaded with RTCGAtoolbox
 }
 \examples{
