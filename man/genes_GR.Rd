@@ -3,16 +3,12 @@
 \docType{data}
 \name{genes_GR}
 \alias{genes_GR}
-\alias{genes_GR}
 \title{A GRanges object with gene information (hg19)}
 \format{A GRanges object}
 \description{
 A GRanges object with gene information (hg19)
-
-A data frame object with gene information (hg19)
 }
 \examples{
-data("genes_GR")
 data("genes_GR")
 }
 \keyword{internal}

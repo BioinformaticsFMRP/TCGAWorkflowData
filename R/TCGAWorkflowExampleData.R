@@ -32,7 +32,7 @@ NULL
 #'  A data frame object with gene information (hg19)
 #' @docType data
 #' @keywords internal
-#' @name genes_GR
+#' @name genes
 #' @format A dataframe object
 #' @examples
 #' data("genes_GR")

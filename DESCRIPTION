@@ -1,6 +1,6 @@
 Package: TCGAWorkflowData
 Title: Data for TCGA Workflow 
-Version: 0.99.16
+Version: 0.99.17
 Author: Tiago Chedraoui Silva  <tiagochst@usp.br>
 Maintainer: Tiago Chedraoui Silva <tiagochst@usp.br>
 Description: 
