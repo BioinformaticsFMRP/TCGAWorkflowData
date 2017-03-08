@@ -29,6 +29,15 @@ NULL
 #' data("genes_GR")
 NULL
 
+#'  A data frame object with gene information (hg19)
+#' @docType data
+#' @keywords internal
+#' @name genes_GR
+#' @format A dataframe object
+#' @examples
+#' data("genes_GR")
+NULL
+
 #' A gene expression matrix for 10 GBM and 10 LGG samples prepared for
 #' the creation of an ELMER object.
 #' @docType data
@@ -180,14 +189,14 @@ NULL
 #'     10  LGG (Lower grade glioma) and 10 GBM (Glioblastoma multiforme) in the required format
 #'     for to execute the R/Bioconductor ELMER package analysis and a vector
 #'     identifying which sample belongs to each tumor type.
-#'     \item GBMGistic: a subset of GBM GISTIC results which is used to identify genes targeted by
+#'    \item GBMGistic: a subset of GBM GISTIC results which is used to identify genes targeted by
 #'      somatic copy-number  alterations (SCNAs)
-#'      \item biogrid: biogrid information
+#'    \item biogrid: biogrid information
 #'   \item mafMutect2LGGGBM: Mutation annotation files for LGG (Lower grade glioma) and GBM (Glioblastoma multiforme)
 #'     samples merged into a single matrix. The GDC Somatic Mutation Calling Workflow mutect2 was used to create this MAF files.
 #'   \item markersMatrix: Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
 #'   \item  histoneMarks: histone marks specific for brain tissue using from Roadmap database.
-#'   \item  genes_GR: A GRanges Object  with gene information (hg19) downloaded from ENSEMBLE database using
+#'   \item  genes_GR: A GRanges Object and a dataframe  with gene information (hg19) downloaded from ENSEMBLE database using
 #'   biomart via TCGAbiolinks
 #'}
 #'     For more information how to create these objects please read the vignette of this package with the
