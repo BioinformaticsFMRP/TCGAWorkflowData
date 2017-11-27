@@ -1,9 +1,9 @@
 Package: TCGAWorkflowData
 Title: Data for TCGA Workflow 
-Version: 0.99.14
+Version: 0.99.18
 Author: Tiago Chedraoui Silva  <tiagochst@usp.br>
 Maintainer: Tiago Chedraoui Silva <tiagochst@usp.br>
-Description: 
+Description:
   This experimental data package contains 11 data sets necessary to follow the 
   "TCGA Workflow: Analyze cancer genomics and epigenomics data using Bioconductor packages".
 Depends:
@@ -11,12 +11,13 @@ Depends:
 Imports: SummarizedExperiment
 License: GPL-3
 VignetteBuilder: knitr
-biocViews: ExperimentData, Homo_sapiens_Data, MicroarrayData
+biocViews: ExperimentData, Homo_sapiens_Data, MicroarrayData, CancerData
 NeedsCompilation: no
 URL: https://f1000research.com/articles/5-1542/v2
 BugReports: https://github.com/BioinformaticsFMRP/TCGAWorkflow/issues
 RoxygenNote: 6.0.1
-Suggests: 
+Suggests:
     knitr,
     rmarkdown,
-    pander
+    pander,
+    testthat
