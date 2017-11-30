@@ -1,6 +1,5 @@
-# TCGAWorkflowData 0.99.17
+# TCGAWorkflowData 1.3.2
 
-* Added a `NEWS.md` file to track changes to the package.
-
+* Updating workflowData for the  new version of ELMER.
 
 

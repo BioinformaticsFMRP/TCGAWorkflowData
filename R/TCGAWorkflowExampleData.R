@@ -7,20 +7,10 @@
 #' @import SummarizedExperiment
 #' @format A SumarrizedExperiment with 9861 rows and 20 samples
 #' @examples
-#' data("met20samplesGBMLGGchr9")
-NULL
-
-#' A DNA methylation matrix for 10 GBM and 10 LGG samples prepared for
-#' the creation of an ELMER object.
-#' @docType data
-#' @keywords internal
-#' @name met.elmer
-#' @format A matrix with 8066 rows and 20 samples
-#' @examples
 #' data("elmerExample")
 NULL
 
-#'  A GRanges object with gene information (hg19)
+#' A GRanges object with gene information (hg19)
 #' @docType data
 #' @keywords internal
 #' @name genes_GR
@@ -29,7 +19,7 @@ NULL
 #' data("genes_GR")
 NULL
 
-#'  A data frame object with gene information (hg19)
+#' A data frame object with gene information (hg19)
 #' @docType data
 #' @keywords internal
 #' @name genes
@@ -42,7 +32,7 @@ NULL
 #' the creation of an ELMER object.
 #' @docType data
 #' @keywords internal
-#' @name exp.elmer
+#' @name exp
 #' @format A matrix with 21022 rows and 20 samples
 #' @examples
 #' data("elmerExample")
