@@ -249,6 +249,18 @@ tmp.biogrid <- read.csv(gsub("zip","txt",basename(file)), header=TRUE, sep="\t",
 save(tmp.biogrid, file = "biogrid.rda", compress = "xz")
 ```
 
+## GISTIC2.0 auxiliary data
+
+Download hg19_support information.
+
+```{r , eval=FALSE, include=TRUE, results='asis'}
+file <- "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/hg19_support/CNV.hg19.bypos.111213.txt"
+if(!file.exists(basename(file))) downloader::download(file, basename(file))
+commonCNV <- readr::read_tsv(basename(file), progress = FALSE)
+commonCNV <- as.data.frame(commonCNV)
+save(commonCNV,file = "CNV.hg19.bypos.111213.rda",compress = "xz")
+```
+
 ## Histone marks
 
 The code below was used to download histone marks specific for brain tissue using
