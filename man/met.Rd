@@ -13,6 +13,6 @@ TCGA data: DNA methylation platform 450K chromossome 9
 for 10 LGG samples and 10 GBM samples
 }
 \examples{
-data("met20samplesGBMLGGchr9")
+data("elmerExample")
 }
 \keyword{internal}

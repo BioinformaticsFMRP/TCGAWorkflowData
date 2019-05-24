@@ -25,7 +25,6 @@ data("elmerExample")
 data("GBMnocnvhg19")
 data("GBMIllumina_HiSeq")
 data("LGGIllumina_HiSeq")
-data("met20SamplesGBMLGGchr9")
 data("mafMutect2LGGGBM")
 data("markersMatrix")
 data("histoneMarks")
@@ -187,9 +186,6 @@ query.met <- GDCquery(project = c("TCGA-LGG","TCGA-GBM"),
 GDCdownload(query.met)
 met <- GDCprepare(query.met, save = FALSE)
 met <- subset(met,subset = as.character(GenomicRanges::seqnames(met)) %in% c("chr9"))
-save("met.20.samples.GBM.LGG.chr9.rda")
-
-met.elmer <- TCGAprepare_elmer(met, platform = "HumanMethylation450")
 
 #-----------------------------------
 # 2 - Expression
@@ -202,15 +198,14 @@ query.exp <- GDCquery(project = c("TCGA-LGG","TCGA-GBM"),
                      legacy = TRUE, 
                      barcode =  samples)
 GDCdownload(query.exp)
-exp.lgg <- GDCprepare(query.exp, save = FALSE)
-exp.elmer <- TCGAprepare_elmer(exp.lgg, platform = "IlluminaHiSeq_RNASeqV2")
-save(exp.elmer, met.elmer, gbm.samples, lgg.samples, file = "elmerExample.rda", compress = "xz")
+exp <- GDCprepare(query.exp, save = FALSE)
+save(exp, met, gbm.samples, lgg.samples, file = "elmerExample.rda", compress = "xz")
 ```
 
 ## Mutation data
 
-The following code will downlaod Mutation annotation files from LGG and GBM samples
-and merge them into one single single file. The GDC Somatic Mutation Calling Workflow 
+The following code will download Mutation annotation files (aligned against the genoem of reference hg38) 
+for LGG and GBM samples and merge them into one single single file. The GDC Somatic Mutation Calling Workflow 
 used is the mutect2. For more information please check [GDC](https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/).
 
 ```{r , eval=FALSE, include=TRUE, results='asis'}
@@ -218,7 +213,7 @@ library(TCGAbiolinks)
 LGGmut <- GDCquery_Maf(tumor = "LGG", pipelines = "mutect2")
 GBMmut <- GDCquery_Maf(tumor = "GBM", pipelines = "mutect2")
 mut <- plyr::rbind.fill(LGGmut, GBMmut)
-save(mut,LGGmut,GBMmut,file ="mafMutect2LGGGBM.rda")
+save(mut, LGGmut, GBMmut,file = "mafMutect2LGGGBM.rda")
 ```
 
 ## Probes meta file from broadinstitute website for Copy Number Variation Analysis (CNV) analysis
