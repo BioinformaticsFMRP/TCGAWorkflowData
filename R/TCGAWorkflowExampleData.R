@@ -3,6 +3,17 @@
 #' for 10 LGG samples and 10 GBM samples
 #' @docType data
 #' @keywords internal
+#' @name commonCNV
+#' @format A data frame with 7454 rows and 6 columns
+#' @examples
+#' data("CNV.hg19.bypos.111213")
+NULL
+
+#' A SummarizedExperiment containing
+#' TCGA data: DNA methylation platform 450K chromossome 9
+#' for 10 LGG samples and 10 GBM samples
+#' @docType data
+#' @keywords internal
 #' @name met
 #' @import SummarizedExperiment
 #' @format A SumarrizedExperiment with 9861 rows and 20 samples
