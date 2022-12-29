@@ -68,12 +68,12 @@ Download and save a subset of GBM GISTIC results from GDAC firehose.
 library(RTCGAToolbox)
 # Download GISTIC results
 lastAnalyseDate <- getFirehoseAnalyzeDates(1)
-gistic <- getFirehoseData("GBM",gistic2_Date = lastAnalyseDate)
+gistic <- getFirehoseData("GBM", gistic2Date = lastAnalyseDate, GISTIC = TRUE)
 
 # get GISTIC results
-gistic.allbygene <- getData(gistic,type = "GISTIC", CN = "All")
+gistic.allbygene <- getData(gistic,type = "GISTIC", platform = "AllByGene")
 gistic.allbygene <- gistic.allbygene[1:10,]
-gistic.thresholedbygene <- getData(gistic,type = "GISTIC", CN = "Thresholed")
+gistic.thresholedbygene <- getData(gistic,type = "GISTIC", platform = "ThresholdedByGene")
 gistic.thresholedbygene <- gistic.thresholedbygene[1:10,]
 save(gistic.allbygene,gistic.thresholedbygene,file = "GBMGistic.rda", compress = "xz")
 ```
